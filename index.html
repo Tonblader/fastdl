@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FastDL - Tonblader</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f5f5f5;
+            margin: 0;
+            padding: 20px;
+            color: #333;
+        }
+        .container {
+            max-width: 900px;
+            margin: auto;
+            background: white;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+        h1 {
+            color: #2c3e50;
+            border-bottom: 3px solid #e67e22;
+            padding-bottom: 10px;
+        }
+        h2 {
+            color: #34495e;
+            margin-top: 30px;
+        }
+        .info {
+            background: #e8f4fd;
+            padding: 15px;
+            border-radius: 8px;
+            margin: 20px 0;
+            border-left: 5px solid #3498db;
+        }
+        .info code {
+            background: #d0e0f0;
+            padding: 4px 8px;
+            border-radius: 4px;
+            font-size: 1.1em;
+        }
+        .file-structure {
+            background: #f8f9fa;
+            padding: 15px;
+            border-radius: 8px;
+            font-family: 'Courier New', monospace;
+            line-height: 1.6;
+            border: 1px solid #ddd;
+        }
+        .file-structure a {
+            color: #2980b9;
+            text-decoration: none;
+        }
+        .file-structure a:hover {
+            text-decoration: underline;
+        }
+        .note {
+            background: #fff3cd;
+            border-left: 5px solid #ffc107;
+            padding: 15px;
+            border-radius: 8px;
+            margin-top: 30px;
+        }
+        ul {
+            list-style-type: none;
+            padding-left: 20px;
+        }
+        li {
+            margin: 8px 0;
+        }
+        li:before {
+            content: "📁 ";
+            color: #e67e22;
+            font-weight: bold;
+        }
+        li.file:before {
+            content: "📄 ";
+            color: #3498db;
+        }
+        .btn {
+            display: inline-block;
+            background: #e67e22;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: bold;
+            margin-top: 10px;
+        }
+        .btn:hover {
+            background: #d35400;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <h1>🚀 FastDL de Tonblader</h1>
+    <p>Servidor de descarga rápida para Left 4 Dead 2 y otros juegos.</p>
+
+    <div class="info">
+        <strong>📌 Configuración correcta en tu <code>listenserver.cfg</code>:</strong><br>
+        <code>sm_cvar sv_downloadurl "http://tonblader.github.io/fastdl/"</code>
+        <p><small>El juego agregará automáticamente <code>left4dead2/</code> a las rutas de los archivos.</small></p>
+    </div>
+
+    <h2>📂 Estructura de archivos</h2>
+    <div class="file-structure">
+        <ul>
+            <li><a href="left4dead2/">left4dead2/</a></li>
+            <ul>
+                <li><a href="left4dead2/models/">models/</a></li>
+                <ul>
+                    <li><a href="left4dead2/models/player/">player/</a></li>
+                    <ul>
+                        <li><a href="left4dead2/models/player/kodua/">kodua/</a></li>
+                        <ul>
+                            <li><a href="left4dead2/models/player/kodua/test/">test/</a></li>
+                            <ul>
+                                <!-- Aquí puedes añadir enlaces a archivos reales cuando existan -->
+                                <li class="file">🔹 <em>(agrega aquí tus archivos .mdl, .vmt, .vpk, etc.)</em></li>
+                            </ul>
+                        </ul>
+                    </ul>
+                </ul>
+            </ul>
+        </ul>
+    </div>
+
+    <h2>🔍 Prueba de descarga directa</h2>
+    <p>Si ya subiste algún archivo dentro de <code>left4dead2/models/player/kodua/test/</code>, puedes probar su acceso directo:</p>
+    <ul>
+        <li class="file"><a href="left4dead2/models/player/kodua/test/ejemplo.mdl" target="_blank">left4dead2/models/player/kodua/test/ejemplo.mdl</a> (reemplaza con el nombre real)</li>
+    </ul>
+    <p>⚠️ <strong>Importante:</strong> GitHub Pages distingue entre mayúsculas y minúsculas. Asegúrate de que las rutas coincidan exactamente con las de tu repositorio.</p>
+
+    <div class="note">
+        <strong>ℹ️ Nota sobre el error 404 en carpetas:</strong> Es normal que al intentar abrir una carpeta (por ejemplo, <code>left4dead2/</code>) veas un error 404, a menos que haya un archivo <code>index.html</code> dentro. Esto no significa que los archivos no sean accesibles; las descargas directas a archivos sí funcionan.
+    </div>
+
+    <p>✅ <strong>Tu FastDL está activo.</strong> Si los jugadores no descargan, verifica que:</p>
+    <ul>
+        <li>Los archivos están en la rama <code>main</code> y el repositorio es público.</li>
+        <li>Usas la variable <code>sv_downloadurl</code> sin <code>left4dead2</code> al final.</li>
+        <li>El servidor tiene permitidas las descargas personalizadas (<code>sv_allowdownload 1</code>).</li>
+    </ul>
+
+    <a class="btn" href="https://github.com/tonblader/fastdl" target="_blank">Ver repositorio en GitHub</a>
+</div>
+</body>
+</html>
